@@ -7,7 +7,6 @@
 
 /* INDEXING */
 
-
 var flowers = {
     'EMPTY' : 0,
     'BLK_C' : 1,
@@ -64,9 +63,13 @@ var flowers = {
     'WHT_W' : 52
 };
 
+/* TILESET */
+
 var tilesetImage = new Image();
 tilesetImage.src = 'images/tileset.png';
 tilesetImage.onload = drawImage;
+
+/* CANVAS */
 
 var canvas = document.getElementsByTagName('canvas');
 var ctx = [];
@@ -74,17 +77,19 @@ for (var i = 0; i < canvas.length; i++) {
     ctx.push(canvas[i].getContext('2d'));
 }
 
-var tileSize = 32;
-var rowTileCount = 7;
-var colTileCount = 14;
-var imageNumTiles = 9;
-var imageTileSize = 128;
+/* VARIABLES */
+
+var tileSize = 32; // size of each tile displayed on site
+var rowTileCount = 7; // number of rows on tilesheet
+var colTileCount = 14; // number of cols on tilesheet
+var imageNumTiles = 9; // number of tiles per row on tilesheet
+var imageTileSize = 128; // size of each tile on tilesheet
 
 /* LAYOUTS */
 
-var thirty = 30;
-
 var layouts = [];
+
+/* PANSIES AND WINDFLOWERS */
 
 var pw1 = [
     [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
