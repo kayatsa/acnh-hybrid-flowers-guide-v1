@@ -87,31 +87,44 @@ var imageTileSize = 128; // size of each tile on tilesheet
 
 /* LAYOUTS */
 
-var layouts = [];
+var layouts = [
 
-/* PANSIES AND WINDFLOWERS */
+    /* PANSIES AND WINDFLOWERS */
 
-var pw1 = [
-    [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
-    [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
-    [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
-    [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
-    [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
-    [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
-    [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
+    // STEP 1
+    [
+        [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
+        [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
+        [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
+        [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
+        [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W],
+        [flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.EMPTY, flowers.WHT_P, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W, flowers.EMPTY, flowers.WHT_W],
+        [flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_P, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W, flowers.WHT_W]
+    ],
+
+    // STEP 2
+    [
+        [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
+        [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
+        [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
+        [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
+        [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
+        [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
+        [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P]
+    ],
+
+    // STEP 3
+    [
+        [flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W],
+        [flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W],
+        [flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W],
+        [flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W],
+        [flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W],
+        [flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.EMPTY, flowers.RED_P, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W, flowers.EMPTY, flowers.RED_W],
+        [flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_P, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W, flowers.RED_W]
+    ]
+
 ];
-layouts.push(pw1);
-
-var pw2 = [
-    [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
-    [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
-    [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
-    [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
-    [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
-    [flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY, flowers.RED_W, flowers.BLU_W, flowers.EMPTY, flowers.RED_W, flowers.ORG_W, flowers.EMPTY],
-    [flowers.EMPTY, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P, flowers.EMPTY, flowers.RED_P, flowers.BLU_P, flowers.EMPTY, flowers.RED_P, flowers.YLW_P],
-];
-layouts.push(pw2);
 
 /* DRAW */
  
