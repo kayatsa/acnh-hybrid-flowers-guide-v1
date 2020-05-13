@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Animal Crossing New Horizons: Hybrid Flowers Guide
 
 A guide to obtaining all hybrid flowers in Animal Crossing New Horizons.
@@ -27,6 +26,3 @@ This guide would not have been possible without the work of Aeter's [data mining
 Big thanks to Kyro TV for their [guide on obtaining blue roses](https://www.youtube.com/watch?v=7NDWIqpju5k). There are many ways to obtain blue roses but majority of them are complex, multi-step processes. But Kyro TV's video explains one such way to obtain blue roses very clearly.
 
 Credit to BackwardsN for their [compact breeding layout guide](https://cdn.discordapp.com/attachments/694317725190717440/701714066611109928/image0.png). Most of my layouts are thanks to the help of their guide.
-=======
-# acnh-hybrid-flowers-guide
->>>>>>> parent of 828102a... Update README.md
