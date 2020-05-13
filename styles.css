@@ -1,3 +1,5 @@
+/* GENERAL */
+
 body {
     font-family: sans-serif;
     background-image: url(images/bg.png);
@@ -6,6 +8,8 @@ body {
     text-align: center;
     line-height: 1.5em;
 }
+
+/* STEP HEADERS */
 
 h2 {
     padding: 15px;
@@ -28,9 +32,12 @@ h2::after {
     margin-left: 1em;
 }
 
+/* TABLES */
+
 table {
     margin-left: auto;
     margin-right: auto;
+    background-color: #fff;
 }
 
 table, th, td {
@@ -40,6 +47,13 @@ table, th, td {
 
 th, td {
     padding: 10px;
+}
+
+/* VERBOSE MODE */
+
+.verbose {
+    background-color: #ccc;
+    padding: 25px;
 }
 
 /* SECTIONS */

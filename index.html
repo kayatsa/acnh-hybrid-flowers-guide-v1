@@ -22,12 +22,12 @@
             <h1>Quick Links</h1>
             </div>
         
-            <ul>
-                <li><a href="#pansies-windflowers">Pansies and Windflowers</a></li>
-                <li><a href="#cosmos-mums">Cosmos and Mums</a></li>
-                <li><a href="#hyacinths-tulips">Hyacinths and Tulips</a></li>
-                <li><a href="#roses-lilies">Roses and Lilies</a></li>
-            </ul>
+            <a href="#pansies-windflowers">Pansies and Windflowers</a><br>
+            <a href="#cosmos-mums">Cosmos and Mums</a><br>
+            <a href="#hyacinths-tulips">Hyacinths and Tulips</a><br>
+            <a href="#roses-lilies">Roses and Lilies</a>
+
+            <p><button onclick="toggleVerbose()">toggle verbose mode on/off</button></p>
             
         </div>
         
@@ -62,6 +62,52 @@
             
             <p><canvas width="448" height="224">If you can read this message, your browser does not support this feature. Please update your browser to the latest version.</canvas></p>
             
+            <div class="verbose">
+                <table>
+                    <tr>
+                        <th>FLOWER</th>
+                        <th>PARENTS</th>
+                        <th>OFFSPRING</th>
+                        <th>GENOTYPE</th>
+                        <th>CHANCE</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Pansies</th>
+                        <td rowspan="3"><span class="white">white</span> x <span class="white">white</span></td>
+                        <td><span class="white">white</span></td>
+                        <td>0010</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="white">white</span></td>
+                        <td>0000</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="blue">blue</span></td>
+                        <td>0020</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Windflowers</th>
+                        <td rowspan="3"><span class="white">white</span> x <span class="white">white</span></td>
+                        <td><span class="white">white</span></td>
+                        <td>0010</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="white">white</span></td>
+                        <td>0000</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="blue">blue</span></td>
+                        <td>0020</td>
+                        <td>25%</td>
+                    </tr>
+                </table>
+            </div>
+
             <h2>Step 2</h2>
 
             <table>
@@ -90,12 +136,50 @@
                     <td>12x <span class="red">red</span> windflower seeds</td>
                 </tr>
                 <tr>
-                    <td>8x <span class="yellow">yellow</span> windflower seeds</td>
+                    <td>8x <span class="orange">orange</span> windflower seeds</td>
                 </tr>
             </table>
 
             <p><canvas width="448" height="224">If you can read this message, your browser does not support this feature. Please update your browser to the latest version.</canvas></p>
             
+            <div class="verbose">
+                <table>
+                    <tr>
+                        <th>FLOWER</th>
+                        <th>PARENTS</th>
+                        <th>OFFSPRING</th>
+                        <th>GENOTYPE</th>
+                        <th>CHANCE</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Pansies</th>
+                        <td><span class="red">red</span> x <span class="blue">blue</span></td>
+                        <td><span class="red">red</span></td>
+                        <td>1010</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red">red</span> x <span class="yellow">yellow</span></td>
+                        <td><span class="orange">orange</span></td>
+                        <td>1100</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Windflowers</th>
+                        <td><span class="red">red</span> x <span class="blue">blue</span></td>
+                        <td><span class="red">red</span></td>
+                        <td>1010</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red">red</span> x <span class="orange">orange</span></td>
+                        <td><span class="pink">pink</span></td>
+                        <td>1100</td>
+                        <td>100%</td>
+                    </tr>
+                </table>
+            </div>
+
             <h2>Step 3</h2>
 
             <table>
@@ -117,6 +201,57 @@
             </table>
 
             <p><canvas width="448" height="224">If you can read this message, your browser does not support this feature. Please update your browser to the latest version.</canvas></p>
+
+            <div class="verbose">
+                <table>
+                    <tr>
+                        <th>FLOWER</th>
+                        <th>PARENTS</th>
+                        <th>OFFSPRING</th>
+                        <th>GENOTYPE</th>
+                        <th>CHANCE</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="9">Pansies</th>
+                        <td rowspan="9"><span class="red">red</span> x <span class="red">red</span></td>
+                        <td><span class="red">red</span></td>
+                        <td>1010</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red">red</span></td>
+                        <td>2010</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red">red</span></td>
+                        <td>1000</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red">red</span></td>
+                        <td>2000</td>
+                        <td>6.25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="white">white</span></td>
+                        <td>0010</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="white">white</span></td>
+                        <td>0000</td>
+                        <td>6.25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="blue">blue</span></td>
+                        <td>0020</td>
+                        <td>6.25%</td>
+                    </tr>
+
+                    <!-- TODO -->
+                </table>
+            </div>
 
         </div>
 
@@ -278,7 +413,22 @@
 
         </div>
         
+        <!-- Layout script -->
         <script type="text/javascript" src="grids.js"></script>
+
+        <!-- Verbose mode script -->
+        <script>
+            function toggleVerbose() {
+                var x = document.getElementsByClassName("verbose");
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i].style.display === "none") {
+                        x[i].style.display = "block";
+                    } else {
+                        x[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
         
    </body>
 </html>
